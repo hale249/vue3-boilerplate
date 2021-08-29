@@ -1,5 +1,12 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import store from "./store";
+import router from "./router";
+import { registerGlobalComponent } from "./utilts/import";
 
-createApp(App).use(store).mount("#app");
+
+const app = createApp(App);
+app.config.productionTip = false;
+registerGlobalComponent(app);
+app.use(router);
+app.use(store).mount("#app");
