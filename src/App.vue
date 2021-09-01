@@ -8,6 +8,7 @@
 import { computed } from "@vue/reactivity";
 import { useRoute } from "vue-router";
 import { PUBLIC_LAYOUT } from "./constants";
+
 export default {
   name: "App",
   components: {},
